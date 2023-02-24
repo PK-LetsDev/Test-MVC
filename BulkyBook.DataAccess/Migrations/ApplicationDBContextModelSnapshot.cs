@@ -359,7 +359,7 @@ namespace WebApplication1.Migrations
                     b.Property<string>("OrderStatus")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("OrederTotal")
+                    b.Property<double>("OrderTotal")
                         .HasColumnType("float");
 
                     b.Property<DateTime>("PayDateTime")
