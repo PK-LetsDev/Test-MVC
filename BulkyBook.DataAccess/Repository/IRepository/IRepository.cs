@@ -5,14 +5,13 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApplication.DataAccess.Repository.IRepository
+namespace WebApplication.DataAccess.Repository.IRepository;
+
+public interface IRepository <T> where T : class
 {
-    public interface IRepository <T> where T : class
-    {
-        T GetFistOrDefault(Expression<Func<T, bool>> filter,string? includeProperties = null);
-        IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter=null, string? includeProperties = null);
-        void Add(T entity);
-        void Remove(T entity);
-        void RemoveRange(IEnumerable<T> entities);
-    }
+	T GetFistOrDefault(Expression<Func<T, bool>> filter,string? includeProperties = null);
+	IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter=null, string? includeProperties = null);
+	void Add(T entity);
+	void Remove(T entity);
+	void RemoveRange(IEnumerable<T> entities);
 }

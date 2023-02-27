@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApplication.Utility
+namespace WebApplication.Utility;
+
+public class StripeSetting
 {
-    public class StripeSetting
-    {
-        public string SecretKey { get; set; }
-        public string PublishableKey { get; set; }
-    }
+	public string SecretKey { get; set; }
+	public string PublishableKey { get; set; }
 }

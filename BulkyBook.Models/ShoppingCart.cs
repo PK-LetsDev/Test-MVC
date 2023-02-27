@@ -7,22 +7,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace WebApplication.Models
+namespace WebApplication.Models;
+
+public class ShoppingCart
 {
-    public class ShoppingCart
-    {
-        public  int Id { get; set; }
-        public int ProductId { get; set; }
-        public Product Product { get; set; }
-        [Range(1, 100, ErrorMessage = "Please enter a value between 1 and 100")]
-        public int Count { get; set; }
+	public  int Id { get; set; }
+	public int ProductId { get; set; }
+	public Product Product { get; set; }
+	[Range(1, 100, ErrorMessage = "Please enter a value between 1 and 100")]
+	public int Count { get; set; }
 
-        public string ApplicationUserId { get; set; }
-        [ForeignKey("ApplicationUserId")]
-        [ValidateNever]
-        public ApplicationUser ApplicationUser { get; set; }
+	public string ApplicationUserId { get; set; }
+	[ForeignKey("ApplicationUserId")]
+	[ValidateNever]
+	public ApplicationUser ApplicationUser { get; set; }
 
-        [NotMapped]
-        public double Price { get; set; }
-    }
+	[NotMapped]
+	public double Price { get; set; }
 }

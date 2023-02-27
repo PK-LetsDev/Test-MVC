@@ -1,9 +1,8 @@
 ﻿using WebApplication.Models;
 
-namespace WebApplication.DataAccess.Repository.IRepository
+namespace WebApplication.DataAccess.Repository.IRepository;
+
+public interface ICompanyRepository : IRepository<Company>
 {
-    public interface ICompanyRepository : IRepository<Company>
-    {
-        void Update(Company obj);
-    }
+	void Update(Company obj);
 }

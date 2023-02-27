@@ -1,9 +1,8 @@
 ﻿using WebApplication.Models;
 
-namespace WebApplication.DataAccess.Repository.IRepository
+namespace WebApplication.DataAccess.Repository.IRepository;
+
+public interface ICategoryRepository : IRepository<Category>
 {
-    public interface ICategoryRepository : IRepository<Category>
-    {
-        void Update(Category obj);
-    }
+	void Update(Category obj);
 }

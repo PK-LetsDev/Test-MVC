@@ -6,13 +6,12 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApplication.Utility
+namespace WebApplication.Utility;
+
+public class EmailSender : IEmailSender
 {
-    public class EmailSender : IEmailSender
-    {
-        public Task SendEmailAsync(string email, string subject, string htmlMessage)
-        {
-            return Task.CompletedTask;
-        }
-    }
+	public Task SendEmailAsync(string email, string subject, string htmlMessage)
+	{
+		return Task.CompletedTask;
+	}
 }
