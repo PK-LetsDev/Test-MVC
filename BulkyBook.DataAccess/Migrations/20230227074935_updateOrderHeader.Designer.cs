@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WebApplication.DataAccess;
 using WebApplication.DataAccess.Data;
 
 #nullable disable
@@ -13,8 +12,8 @@ using WebApplication.DataAccess.Data;
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20230224081438_addOrderHeaderAndDetailToDb")]
-    partial class addOrderHeaderAndDetailToDb
+    [Migration("20230227074935_updateOrderHeader")]
+    partial class updateOrderHeader
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -360,13 +359,13 @@ namespace WebApplication1.Migrations
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("OrderTotal")
+                    b.Property<string>("OrderStatus")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("OrederTotal")
+                    b.Property<double>("OrderTotal")
                         .HasColumnType("float");
 
-                    b.Property<DateTime>("PayDateTime")
+                    b.Property<DateTime>("PaymentDate")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("PaymentDueDate")

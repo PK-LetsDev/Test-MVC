@@ -28,7 +28,7 @@ public class OrderHeader
 
 	public string? TrackingNumber { get; set; }
 	public string? Carrier { get; set; }
-	public DateTime PayDateTime { get; set; }
+	public DateTime PaymentDate{ get; set; }
 	public DateTime PaymentDueDate { get; set; }
 
 	public string? SessionId { get; set; }
